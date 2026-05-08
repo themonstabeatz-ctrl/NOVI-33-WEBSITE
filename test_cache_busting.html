@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cache Test</title>
+    <script>
+        // Force reload with cache busting
+        if (performance.navigation.type !== 1) {
+            const url = new URL(window.location.href);
+            url.searchParams.set('nocache', Date.now());
+            window.location.href = url.toString();
+        }
+    </script>
+</head>
+<body>
+    <h1>If you see this, the cache busting works!</h1>
+    <p>Timestamp: <script>document.write(new Date().toISOString());</script></p>
+</body>
+</html>

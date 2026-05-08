@@ -1,0 +1,144 @@
+/* ========================================
+   REFRESH PARALLAX SECTION - "Osvežite se"
+   Horizontalne kartice jedna ispod druge
+   Ista struktura krivih linija kao "Naši tretmani"
+   ======================================== */
+
+.refresh-parallax-section {
+  position: relative;
+  width: 100%;
+  min-height: 1300px;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* SVG Wrapper sa parallax efektom */
+.refresh-curve-wrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+}
+
+.refresh-curve-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Zlatne linije */
+.refresh-curve-line {
+  fill: none;
+  stroke: rgba(212, 175, 55, 0.95);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+/* Tamno siva ispuna između linija */
+.refresh-curve-fill {
+  fill: #0a0a0a;
+}
+
+/* Sadržaj sekcije */
+.refresh-parallax-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 320px 20px 180px 20px;
+  text-align: center;
+}
+
+/* Naslov */
+.refresh-parallax-title {
+  color: rgba(212, 175, 55, 0.95);
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-bottom: 60px;
+  margin-top: 80px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10;
+}
+
+/* Lista kartica - vertikalni layout */
+.refresh-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  perspective: 1500px;
+}
+
+/* Kartica - #a79a91 pozadina, CENTRIRAN tekst */
+.refresh-card {
+  background: #a79a91;
+  border-radius: 16px;
+  padding: 28px 36px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Floating efekat na hover */
+.refresh-card:hover {
+  transform: translateY(-10px) !important;
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Naslov kartice - CRNA boja, uvećan za 20% */
+.refresh-card-title {
+  color: #1a1a1a;
+  font-size: 1.44rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* Opis kartice - TAMNO SIVA, uvećan za 20% */
+.refresh-card-desc {
+  color: #555;
+  font-size: 1.14rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .refresh-parallax-section {
+    min-height: 1100px;
+  }
+  
+  .refresh-parallax-inner {
+    padding: 200px 16px 120px 16px;
+  }
+  
+  .refresh-parallax-title {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .refresh-card {
+    padding: 20px 24px;
+  }
+  
+  .refresh-card-title {
+    font-size: 1.1rem;
+  }
+  
+  .refresh-card-desc {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .refresh-card {
+    padding: 18px 20px;
+  }
+}

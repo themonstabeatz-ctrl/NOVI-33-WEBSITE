@@ -1,0 +1,288 @@
+/* ========================================
+   PARALLAX CURVED SECTION
+   Zlatne krive linije sa flip karticama
+   ======================================== */
+
+.blParallaxSection {
+  position: relative;
+  width: 100%;
+  min-height: 1700px;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* SVG Wrapper sa parallax efektom */
+.blCurveWrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+}
+
+.blCurveSvg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Zlatne linije */
+.blCurveLine {
+  fill: none;
+  stroke: rgba(212, 175, 55, 0.95);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+/* Tamno siva ispuna između linija - kao "Više od nege kose" */
+.blCurveFill {
+  fill: #0a0a0a;
+}
+
+/* Sadržaj sekcije - spušten sa većim razmakom */
+.blParallaxInner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 320px 20px 180px 20px;
+  text-align: center;
+}
+
+/* Naslov ispod zlatne linije - spušten niže */
+.blParallaxTitle {
+  color: rgba(212, 175, 55, 0.95);
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-bottom: 80px;
+  margin-top: 120px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10;
+}
+
+/* Grid za kartice - sa perspective za flip efekat, spušten */
+.blCardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 60px;
+  perspective: 1500px;
+}
+
+@media (max-width: 1024px) {
+  .blCardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .blCardGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .blParallaxTitle {
+    font-size: 1.8rem;
+  }
+  
+  .blParallaxSection {
+    min-height: 900px;
+  }
+  
+  .blParallaxInner {
+    padding: 120px 20px 100px 20px;
+  }
+}
+
+/* ========================================
+   FLIP CARD STILOVI
+   ======================================== */
+
+.blFlipCard {
+  perspective: 1200px;
+  height: 420px;
+  pointer-events: auto;
+  transform-style: preserve-3d;
+}
+
+.blFlipInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  pointer-events: auto;
+}
+
+.blFlipCard.isFlipped .blFlipInner {
+  transform: rotateY(180deg);
+}
+
+/* Zajednički stil za obe strane kartice */
+.blFlipFace {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 16px;
+  background: #a79a91;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  overflow: visible;
+  pointer-events: auto;
+}
+
+/* ========== PREDNJA STRANA ========== */
+.blFront {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Slika na vrhu kartice */
+.blCardImage {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+}
+
+.blCardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blFlipCard:hover .blCardImage img {
+  transform: scale(1.05);
+}
+
+/* Sadržaj kartice */
+.blCardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px;
+  text-align: left;
+}
+
+/* Header - naslov + cena/trajanje */
+.blCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+
+.blCardTitle {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.blCardMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.blCardPrice {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.blCardDuration {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Opis */
+.blCardDesc {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 auto 0;
+  flex: 1;
+}
+
+/* Dugmad na dnu */
+.blCardButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Dugme "DETALJI" */
+.blDetailsBtn {
+  flex: 1;
+  background: transparent;
+  border: 2px solid rgba(212, 175, 55, 0.7);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.blDetailsBtn:hover {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 1);
+  transform: translateY(-2px);
+}
+
+/* ========== ZADNJA STRANA ========== */
+.blBack {
+  transform: rotateY(180deg);
+  background: linear-gradient(145deg, #1a1a1a 0%, #2a2520 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blBackContent {
+  padding: 35px 28px;
+  text-align: center;
+}
+
+.blBackTitle {
+  color: rgba(212, 175, 55, 0.95);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+
+.blBackDesc {
+  color: rgba(230, 225, 215, 0.9);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Napomena na poleđini */
+.blBackNote {
+  color: rgba(212, 175, 55, 0.6);
+  font-size: 0.75rem;
+  font-style: italic;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ========================================
+   HOVER EFEKTI NA KARTICE
+   ======================================== */
+
+.blFlipCard:not(.isFlipped):hover .blFlipFace {
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.4);
+}

@@ -13,8 +13,8 @@ OČEKIVANE CENE:
 - Finalna cena: 7,920 RSD
 
 ENDPOINTS:
-- GET https://gold-line-fixer.preview.emergentagent.com/api/services
-- POST https://gold-line-fixer.preview.emergentagent.com/api/book-appointment
+- GET https://wavy-parallax-hero.preview.emergentagent.com/api/services
+- POST https://wavy-parallax-hero.preview.emergentagent.com/api/book-appointment
 
 Testiranje podaci:
 - Ime: Finalni Test
@@ -29,7 +29,7 @@ import json
 from datetime import datetime, timedelta
 
 # Test configuration
-BASE_URL = "https://gold-line-fixer.preview.emergentagent.com"
+BASE_URL = "https://wavy-parallax-hero.preview.emergentagent.com"
 API_BASE = f"{BASE_URL}/api"
 
 class ComprehensiveFinalniTest:

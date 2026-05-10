@@ -5,7 +5,7 @@ FINALNO ISPRAVLJANJE - Sve cene na okrugle brojeve + uklanjanje popusta
 import requests
 import json
 
-API = "https://gold-line-fixer.preview.emergentagent.com/api"
+API = "https://wavy-parallax-hero.preview.emergentagent.com/api"
 
 # ISPRAVNE OKRUGLE CENE
 CORRECT_PRICES = {

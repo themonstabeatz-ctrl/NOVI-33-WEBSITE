@@ -37,7 +37,7 @@ class FinalReviewRequestTester:
         """Test EXACT booking scenario from review request"""
         
         print("🎯 FINALNO TESTIRANJE - EXACT REVIEW REQUEST SCENARIO")
-        print("Backend će sada koristiti: https://gold-line-fixer.preview.emergentagent.com (koja IMA terapete)")
+        print("Backend će sada koristiti: https://wavy-parallax-hero.preview.emergentagent.com (koja IMA terapete)")
         print()
         
         # EXACT booking data from review request
@@ -113,7 +113,7 @@ class FinalReviewRequestTester:
                                 "client": f"{booking_data['client_first_name']} {booking_data['client_last_name']}",
                                 "client_email": booking_data['client_email'],
                                 "appointment_time": booking_data['start_time'],
-                                "backend_system": "https://gold-line-fixer.preview.emergentagent.com"
+                                "backend_system": "https://wavy-parallax-hero.preview.emergentagent.com"
                             }
                         )
                         
@@ -157,7 +157,7 @@ class FinalReviewRequestTester:
                             "service_name": booking_data['service_name'],
                             "service_id": booking_data['service_id'],
                             "client": f"{booking_data['client_first_name']} {booking_data['client_last_name']}",
-                            "backend_system": "https://gold-line-fixer.preview.emergentagent.com"
+                            "backend_system": "https://wavy-parallax-hero.preview.emergentagent.com"
                         }
                     )
                     return False
@@ -206,7 +206,7 @@ class FinalReviewRequestTester:
 
     async def test_external_system_status(self):
         """Test the external booking system status"""
-        external_url = "https://gold-line-fixer.preview.emergentagent.com"
+        external_url = "https://wavy-parallax-hero.preview.emergentagent.com"
         
         try:
             async with httpx.AsyncClient(timeout=10.0) as client:
@@ -249,7 +249,7 @@ class FinalReviewRequestTester:
         print("=" * 80)
         print(f"Backend URL: {self.backend_url}")
         print(f"API Base: {self.api_base}")
-        print(f"PREVIEW Reception: https://gold-line-fixer.preview.emergentagent.com")
+        print(f"PREVIEW Reception: https://wavy-parallax-hero.preview.emergentagent.com")
         print()
         
         # Step 1: Backend Health Check
@@ -296,8 +296,8 @@ class FinalReviewRequestTester:
                 print("❌ Backend nije dostupan")
             elif not external_ok:
                 print("❌ PREVIEW reception sistem nije dostupan")
-                print("   - https://gold-line-fixer.preview.emergentagent.com/api/services returns 404")
-                print("   - https://gold-line-fixer.preview.emergentagent.com/api/therapists returns 404")
+                print("   - https://wavy-parallax-hero.preview.emergentagent.com/api/services returns 404")
+                print("   - https://wavy-parallax-hero.preview.emergentagent.com/api/therapists returns 404")
             else:
                 print("❌ Jedan ili više kriterijuma nije ispunjen")
             print()

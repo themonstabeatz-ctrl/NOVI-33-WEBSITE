@@ -33,7 +33,7 @@ Crawl-delay: 1
 ```
 
 **Status:** ✅ Live i funkcionalan
-**Test URL:** https://gold-line-fixer.preview.emergentagent.com/robots.txt
+**Test URL:** https://wavy-parallax-hero.preview.emergentagent.com/robots.txt
 
 ---
 

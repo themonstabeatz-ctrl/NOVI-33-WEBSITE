@@ -17,10 +17,10 @@
 
 ```bash
 # STARO (pogrešno):
-REACT_APP_BACKEND_URL=https://gold-line-fixer.preview.emergentagent.com
+REACT_APP_BACKEND_URL=https://wavy-parallax-hero.preview.emergentagent.com
 
 # NOVO (ispravno):
-REACT_APP_BACKEND_URL=https://gold-line-fixer.preview.emergentagent.com
+REACT_APP_BACKEND_URL=https://wavy-parallax-hero.preview.emergentagent.com
 ```
 
 ---
@@ -31,10 +31,10 @@ REACT_APP_BACKEND_URL=https://gold-line-fixer.preview.emergentagent.com
 
 ```bash
 # STARO (pogrešno):
-BOOKING_API_URL="https://gold-line-fixer.preview.emergentagent.com"
+BOOKING_API_URL="https://wavy-parallax-hero.preview.emergentagent.com"
 
 # NOVO (ispravno):
-BOOKING_API_URL="https://gold-line-fixer.preview.emergentagent.com"
+BOOKING_API_URL="https://wavy-parallax-hero.preview.emergentagent.com"
 ```
 
 ---
@@ -211,7 +211,7 @@ else:
 
 ### Test 1: Proveri da API vraća TAČNE cene
 ```bash
-curl -s https://gold-line-fixer.preview.emergentagent.com/api/services/single/list | \
+curl -s https://wavy-parallax-hero.preview.emergentagent.com/api/services/single/list | \
   python3 -c "import sys, json; data=json.load(sys.stdin); \
   svc=data[0]; print(f'Original: {svc[\"original_price\"]}'); \
   print(f'Final: {svc[\"final_price\"]}'); \
@@ -226,7 +226,7 @@ Discount: 5.0%
 ```
 
 ### Test 2: Proveri frontend
-Otvori: https://gold-line-fixer.preview.emergentagent.com/massage
+Otvori: https://wavy-parallax-hero.preview.emergentagent.com/massage
 
 ✅ Sve cene se završavaju sa ",00"
 ✅ Originalne cene su precrtane

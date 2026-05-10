@@ -8,7 +8,7 @@ import { API_BASE } from '../config/api';
  * - Stranica se uvek renderuje
  * - Ako backend nije dostupan: prikazuje warning banner + disabluje booking dugmad
  * 
- * LOCKED TO: https://spa-system-fixes.preview.emergentagent.com
+ * LOCKED TO: https://spa-cors-sync.preview.emergentagent.com
  */
 const BackendHealthCheck = ({ children }) => {
   const [status, setStatus] = useState('checking'); // 'checking', 'healthy', 'error'

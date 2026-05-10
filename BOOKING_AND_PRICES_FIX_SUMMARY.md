@@ -84,7 +84,7 @@ servicesByName[baseName].originalPrices[duration] = correctOriginalPrice;
 ### KAKO TESTIRATI ZAKAZIVANJE:
 
 #### Test 1: Za pojedinačne masaže
-1. Otvori: https://gold-line-fixer.preview.emergentagent.com/massage
+1. Otvori: https://wavy-parallax-hero.preview.emergentagent.com/massage
 2. Klikni "Zakažite" na bilo kojoj kartici masaže
 3. **Očekivano**: Redirectuje na `/contact?service=Tradicionalna tajlandska masaža - 60 min`
 4. Popuni formu:
@@ -108,13 +108,13 @@ servicesByName[baseName].originalPrices[duration] = correctOriginalPrice;
 }
 ```
 
-7. **Proveri u recepciji**: https://gold-line-fixer.preview.emergentagent.com/
+7. **Proveri u recepciji**: https://wavy-parallax-hero.preview.emergentagent.com/
    - Da li se termin pojavljuje u listi termina?
 
 ---
 
 #### Test 2: Za couples masaže
-1. Otvori: https://gold-line-fixer.preview.emergentagent.com/massage
+1. Otvori: https://wavy-parallax-hero.preview.emergentagent.com/massage
 2. Skroluj do "Masaža za parove" kartice
 3. Izaberi trajanje (60, 90, ili 120 min)
 4. Izaberi masažu za Osobu 1 iz dropdown-a

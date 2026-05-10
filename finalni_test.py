@@ -25,7 +25,7 @@ import json
 from datetime import datetime, timedelta
 
 # Test configuration
-BASE_URL = "https://gold-line-fixer.preview.emergentagent.com"
+BASE_URL = "https://wavy-parallax-hero.preview.emergentagent.com"
 API_BASE = f"{BASE_URL}/api"
 
 class FinalniTest:

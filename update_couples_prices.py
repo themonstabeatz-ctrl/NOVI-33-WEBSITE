@@ -64,8 +64,8 @@ async def update_couples_prices():
         
         try:
             # Step 1: Navigate to admin panel
-            print("📍 Navigating to https://gold-line-fixer.preview.emergentagent.com/")
-            await page.goto("https://gold-line-fixer.preview.emergentagent.com/", wait_until="networkidle")
+            print("📍 Navigating to https://wavy-parallax-hero.preview.emergentagent.com/")
+            await page.goto("https://wavy-parallax-hero.preview.emergentagent.com/", wait_until="networkidle")
             await asyncio.sleep(2)
             
             # Step 2: Login with password
@@ -194,7 +194,7 @@ if __name__ == "__main__":
     print("="*60)
     print("🏥 COUPLES MASSAGE PRICE CORRECTION SCRIPT")
     print("="*60)
-    print(f"Target: https://gold-line-fixer.preview.emergentagent.com/")
+    print(f"Target: https://wavy-parallax-hero.preview.emergentagent.com/")
     print(f"Services to update: {len(CORRECT_PRICES)}")
     print("="*60)
     print()

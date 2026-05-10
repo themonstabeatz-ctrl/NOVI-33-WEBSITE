@@ -5,10 +5,10 @@ import App from "@/App";
 import { API_BASE } from "./config/api";
 
 // ✅ RUNTIME GUARD: Verify API_BASE is correct
-const EXPECTED_API_BASE = "https://spa-system-fixes.preview.emergentagent.com";
+const EXPECTED_API_BASE = "https://spa-cors-sync.preview.emergentagent.com";
 
-if (!API_BASE.includes("spa-system-fixes")) {
-  console.warn("⚠️ API_BASE may be misconfigured. Expected spa-system-fixes but got:", API_BASE);
+if (!API_BASE.includes("spa-cors-sync")) {
+  console.warn("⚠️ API_BASE may be misconfigured. Expected spa-cors-sync but got:", API_BASE);
 }
 
 console.log("🔐 LOCKED FRONTEND =", window.location.origin);

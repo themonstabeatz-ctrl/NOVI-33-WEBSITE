@@ -229,7 +229,7 @@ console.log('✅ Booking successful:', responseData);
 ## 🧪 Kako Testirati Nakon Izmene?
 
 ### Test 1: Single Masaže
-1. **Otvori**: https://gold-line-fixer.preview.emergentagent.com/massage
+1. **Otvori**: https://wavy-parallax-hero.preview.emergentagent.com/massage
 2. **Otvori Chrome DevTools** (F12) → Console tab
 3. **Klikni** "Zakažite" na bilo kojoj kartici
 4. **Proveri Console log**:

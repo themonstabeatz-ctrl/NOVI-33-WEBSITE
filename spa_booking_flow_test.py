@@ -9,7 +9,7 @@ Test Cases from Review Request:
 3. Verify frontend hard lock
 4. Verify Contact.js handles notify_status
 
-Backend URL: https://gold-line-fixer.preview.emergentagent.com
+Backend URL: https://wavy-parallax-hero.preview.emergentagent.com
 """
 
 import requests
@@ -20,7 +20,7 @@ import sys
 from datetime import datetime
 
 # Test Configuration
-BACKEND_URL = "https://gold-line-fixer.preview.emergentagent.com"
+BACKEND_URL = "https://wavy-parallax-hero.preview.emergentagent.com"
 TIMEOUT = 30
 
 class Colors:

@@ -19,7 +19,7 @@ load_dotenv('/app/backend/.env')
 load_dotenv('/app/frontend/.env')
 
 # Use frontend URL for testing (as specified in review request)
-BACKEND_URL = os.getenv('REACT_APP_BACKEND_URL', 'https://gold-line-fixer.preview.emergentagent.com')
+BACKEND_URL = os.getenv('REACT_APP_BACKEND_URL', 'https://wavy-parallax-hero.preview.emergentagent.com')
 BOOKING_API_URL = os.getenv('BOOKING_API_URL', 'https://spabooking.emergent.host')
 
 class ReviewRequestTester:

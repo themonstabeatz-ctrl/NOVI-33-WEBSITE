@@ -1,6 +1,6 @@
 /**
  * 🔒 HARD LOCK - DO NOT CHANGE
- * Backend URL: https://spa-system-fixes.preview.emergentagent.com
+ * Backend URL: https://spa-cors-sync.preview.emergentagent.com
  * 
  * 🚫 DISCOUNT UPDATES ARE RECEPCIJA-ONLY!
  * Client frontend ONLY READS discount data from backend.
@@ -8,7 +8,7 @@
  */
 
 // ✅ SINGLE SOURCE OF TRUTH
-export const API_BASE = process.env.REACT_APP_API_BASE_URL || "https://spa-system-fixes.preview.emergentagent.com";
+export const API_BASE = process.env.REACT_APP_API_BASE_URL || "https://spa-cors-sync.preview.emergentagent.com";
 
 // Freeze to prevent accidental overwrite
 Object.freeze?.(API_BASE);
